@@ -19,7 +19,7 @@ Bookology is developed and operated by Empty Studio.
 
 * **Developer:** Empty Studio
 * **Contact Email:** bookologyapp@gmail.com
-* **Website:** https://empty.mt
+* **Website:** https://bookology.app/
 
 ## 2. Information We Collect
 
@@ -114,6 +114,6 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 
 **Email:** bookologyapp@gmail.com
 
-**Website:** https://empty.mt
+**Website:** https://bookology.app/
 
 This Privacy Policy was last updated: July 1, 2025
