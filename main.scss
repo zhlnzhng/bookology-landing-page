@@ -6,14 +6,7 @@ $body-color: {{ site.body_background_color }};
 
 $accent-color: {{ site.link_color }};
 
-
-
-
-
-
-
 @import 
     "base",
-    "layout",
     "github-markdown",
     "bookology"
