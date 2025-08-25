@@ -1,3 +1,103 @@
 ---
-layout: default
+layout: bookology
 ---
+
+<div class="bookology-landing">
+  <!-- Header Section -->
+  <header class="hero-header">
+    <div class="logo-container">
+      <div class="logo-bars">
+        <img src="assets/darkicon.png" alt="Bookology Logo" class="logo-image">
+      </div>
+      <h1 class="brand-name">Bookology</h1>
+    </div>
+    
+    <h2 class="main-heading">The book tracker built for lifelong readers.</h2>
+    
+    <button class="cta-button">
+      <i class="fab fa-apple"></i>
+      Download for iOS
+    </button>
+  </header>
+
+  <!-- Hero Section with Background Image -->
+  <section class="hero-section" id="hero-section">
+    <div class="app-mockup-container">
+      <div class="feature-nav">
+        <span class="feature-item active" data-image="assets/image00.jpg">Track</span>
+        <span class="feature-item" data-image="assets/image01.jpg">Organize</span>
+        <span class="feature-item" data-image="assets/image02.jpg">Timer</span>
+        <span class="feature-item" data-image="assets/image03.jpg">Stats</span>
+        <span class="feature-item" data-image="assets/image04.jpg">Goals</span>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const featureItems = document.querySelectorAll('.feature-item');
+      const heroSection = document.getElementById('hero-section');
+      
+      // Preload all images for smooth transitions
+      const images = [
+        'assets/image00.jpg',
+        'assets/image01.jpg',
+        'assets/image02.jpg',
+        'assets/image03.jpg',
+        'assets/image04.jpg'
+      ];
+      
+      images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+      
+                      featureItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        // Prevent multiple rapid clicks
+                        if (this.classList.contains('active')) return;
+                        
+                        // Remove active class from all items
+                        featureItems.forEach(i => i.classList.remove('active'));
+                        
+                        // Add active class to clicked item
+                        this.classList.add('active');
+                        
+                        // Change background image with smooth transition
+                        const imagePath = this.getAttribute('data-image');
+                        heroSection.style.backgroundImage = `url('${imagePath}')`;
+                    });
+                });
+    });
+  </script>
+
+  <!-- Content Sections -->
+  <section class="content-section">
+    <p class="content-text">
+      Bookology helps you organize your books into a personal library you'll love returning to, while guiding you to build a lasting reading habit.
+    </p>
+  </section>
+
+  <section class="content-section">
+    <p class="content-text">
+      It is a place to collect, track, and celebrate your books so reading becomes not just something you do but part of who you are.
+    </p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <button class="cta-button">
+      <i class="fab fa-apple"></i>
+      Download for iOS
+    </button>
+    
+    <nav class="footer-nav">
+      <a href="#" class="footer-link">Blog</a>
+      <a href="#" class="footer-link">Contact</a>
+      <a href="#" class="footer-link">Press Kit</a>
+      <a href="#" class="footer-link">Privacy Policy</a>
+    </nav>
+    
+    <p class="copyright">Made by Empty Studio</p>
+  </footer>
+</div>
