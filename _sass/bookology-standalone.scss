@@ -8,12 +8,12 @@
     box-sizing: border-box;
   }
   
-  // 隐藏原有的布局元素
-  header {
+  // 隐藏原有的布局元素（只隐藏默认主题的header和footer，不隐藏Bookology的header和footer）
+  > header:not(.hero-header) {
     display: none !important;
   }
   
-  footer {
+  > footer:not(.footer-section) {
     display: none !important;
   }
   
